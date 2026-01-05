@@ -11,7 +11,7 @@ Ctl-Opt nomain;
 
 Dcl-F VATDEF     Keyed usropn;
 
-/copy tobiRecursive/QPROTOSRC/VAT.RPGLEINC
+/copy QPROTOSRC/VAT.RPGLEINC
 
 Dcl-Pr chainVATDEF;
   P_VATCODE       Char(1)         value;

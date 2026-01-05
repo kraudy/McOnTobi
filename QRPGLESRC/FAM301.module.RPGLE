@@ -10,7 +10,7 @@
      D INFO            DS
      D  LRRN                 378    379B 0
 
-      /copy tobiRecursive/QPROTOSRC/FAMILLY.RPGLEINC
+      /copy QPROTOSRC/FAMILLY.RPGLEINC
 
      D indds           ds
      D  help                   1      1n

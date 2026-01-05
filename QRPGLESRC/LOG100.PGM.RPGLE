@@ -3,7 +3,7 @@
      fparameter if   e           k disk
      f                                     infds(info)
 
-      /copy tobiRecursive/QPROTOSRC/APICALL.RPGLEINC
+      /copy QPROTOSRC/APICALL.RPGLEINC
 
      d info            ds
      D  lib                   93    102

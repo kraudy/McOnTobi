@@ -8,7 +8,7 @@
      F                                     sfile(sfl01:rrn01)
      F                                     Infds(Info)
 
-      /copy tobiRecursive/QPROTOSRC/FAMILLY.RPGLEINC
+      /copy QPROTOSRC/FAMILLY.RPGLEINC
       
 
      d providers       pr                  extpgm('ART201')

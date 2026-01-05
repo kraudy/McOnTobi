@@ -7,8 +7,8 @@
      F                                     sfile(sfl01:rrn01)
      F                                     Infds(Info)
 
-      /copy tobiRecursive/QPROTOSRC/PROVIDER.RPGLEINC
-      /copy tobiRecursive/QPROTOSRC/ARTICLE.RPGLEINC
+      /copy QPROTOSRC/PROVIDER.RPGLEINC
+      /copy QPROTOSRC/ARTICLE.RPGLEINC
 
      d art201          pr
      d  arid                               like(aparid)

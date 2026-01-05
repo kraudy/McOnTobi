@@ -2,7 +2,7 @@
 
      FFAMILLY   if   e           k disk    usropn
 
-      /copy tobiRecursive/QPROTOSRC/FAMILLY.RPGLEINC
+      /copy QPROTOSRC/FAMILLY.RPGLEINC
 
      d chainFAMILLY    pr
      D P_FAID                         3     value

@@ -2,7 +2,7 @@
 
      FCUSTOME1  if   e           k disk    usropn
 
-      /copy tobiRecursive/QPROTOSRC/CUSTOMER.RPGLEINC
+      /copy QPROTOSRC/CUSTOMER.RPGLEINC
 
      d chainCUSTOME1   pr
      D P_CUID                         5  0  value

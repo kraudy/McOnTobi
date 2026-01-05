@@ -2,7 +2,7 @@
 
      FPROVIDE1  if   e           k disk    usropn
 
-      /copy tobiRecursive/QPROTOSRC/PROVIDER.RPGLEINC
+      /copy QPROTOSRC/PROVIDER.RPGLEINC
 
      d chainPROVIDE1   pr
      D P_PRID                         5P 0  value

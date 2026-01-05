@@ -12,9 +12,9 @@
      F                                     sfile(sfl01:rrn01)
      F                                     Infds(Info)
 
-      /copy tobiRecursive/QPROTOSRC/CUSTOMER.RPGLEINC
-      /copy tobiRecursive/QPROTOSRC/ARTICLE.RPGLEINC
-      /copy tobiRecursive/QPROTOSRC/VAT.RPGLEINC
+      /copy QPROTOSRC/CUSTOMER.RPGLEINC
+      /copy QPROTOSRC/ARTICLE.RPGLEINC
+      /copy QPROTOSRC/VAT.RPGLEINC
 
      d  ord100         pr
      d   cuid                              options(*NOPASS)
