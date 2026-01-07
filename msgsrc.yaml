@@ -1,0 +1,53 @@
+
+before:
+  - CRTMSGF:
+      MSGF: SGSMSGF
+      CCSID: 65535
+  - ADDMSGD:
+      MSGID: ERR0001
+      MSGF: SGSMSGF
+      MSG: Familly code unknown. Press F4 to select.
+      SEV: 0
+      CCSID: 297
+  - ADDMSGD:
+      MSGID: ERR0002
+      MSGF: SGSMSGF
+      MSG: Country code unknown. Press F4 to select.
+      SEV: 0
+      CCSID: 297
+  - ADDMSGD:
+      MSGID: ERR0003
+      MSGF: SGSMSGF
+      MSG: Article code unknown. Press F4 to select.
+      SEV: 0
+      CCSID: 297
+  - ADDMSGD:
+      MSGID: ERR0004
+      MSGF: SGSMSGF
+      MSG: Customer code unknown. Press F4 to select.
+      SEV: 0
+      CCSID: 297
+  - ADDMSGD:
+      MSGID: ERR0005
+      MSGF: SGSMSGF
+      MSG: Provider code unknown. Press F4 to select.
+      SEV: 0
+      CCSID: 297
+  - ADDMSGD:
+      MSGID: ERR1001
+      MSGF: SGSMSGF
+      MSG: Delivered quantity must be lower or equal to ordered quantity.
+      SEV: 0
+      CCSID: 297
+  - ADDMSGD:
+      MSGID: ERR1002
+      MSGF: SGSMSGF
+      MSG: Ordered quantity can not be lower that the quantity already delivered
+      SEV: 0
+      CCSID: 297
+
+targets:
+  # Simple rpgle compilation
+  curlib.ADDnum.pgm.rpgle:
+    params:
+      SRCSTMF: QRPGLESRC/ADDNUM.RPGLE
