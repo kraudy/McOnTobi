@@ -1,11 +1,17 @@
 
 before:
   # This needs to be the same as the deploy location
-  #Qsh:
-  #  Cmd: curl -LO https://github.com/kraudy/MasterCompiler/releases/download/v0.1.0/MasterCompiler-1.0-SNAPSHOT.jar
   ChgCurDir:
     Dir: builds/McOnTobi
 
+after:
+  # Set dir back
+  ChgCurDir:
+    Dir: ../../
+  # Clean
+  RmvDir:
+    DIR: builds/McOnTobi 
+    SUBTREE: all
 
 targets:
   # Files used by reference
@@ -31,3 +37,20 @@ targets:
   curlib.COU200.pgm.RPG:
     params:
       SRCSTMF: QRPGSRC/COU200.pgm.RPG
+
+    after:
+      - DLTOBJ:
+          OBJ: COU200 
+          OBJTYPE: Pgm
+      - DLTOBJ:
+          OBJ: COU200D 
+          OBJTYPE: File
+      - DLTOBJ:
+          OBJ: COUNTRY 
+          OBJTYPE: File
+      - DLTOBJ:
+          OBJ: CUSTOMER 
+          OBJTYPE: File
+      - DLTOBJ:
+          OBJ: SAMREF 
+          OBJTYPE: File
