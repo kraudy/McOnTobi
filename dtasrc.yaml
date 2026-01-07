@@ -20,7 +20,7 @@ after:
       OBJTYPE: DTAARA
   - DLTOBJ:
       OBJ: STREAMDTA 
-      OBJTYPE: DATAQ
+      OBJTYPE: DTAQ
 
 
 targets:
