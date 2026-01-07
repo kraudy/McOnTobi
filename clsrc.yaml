@@ -4,6 +4,10 @@ targets:
     params:
       SRCSTMF: QCLSRC/OPM.pgm.CLP
   
+  curlib.CRTORD.CMD.cmd:
+    params:
+      SRCSTMF: QCMDSRC/CRTORD.CMD.cmd
+  
   curlib.ORD100C.PGM.CLLE:
     params:
       SRCSTMF: QCLSRC/ORD100C.PGM.CLLE
