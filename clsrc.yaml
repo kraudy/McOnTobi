@@ -1,0 +1,6 @@
+targets:
+  
+  curlib.OPM.pgm.CLP:
+    params:
+      SRCSTMF: QCLSRC/OPM.pgm.CLP
+
