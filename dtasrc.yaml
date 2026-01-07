@@ -1,0 +1,30 @@
+
+before:
+  CRTDTAARA:
+    DTAARA: LASTORDNO 
+    Type: Dec
+    LEN: 6 0 
+    VALUE: 60719 
+    TEXT: Last customer Order
+
+  CRTDTAQ:
+    DTAQ: STREAMDTA
+    MAXLEN: 64512 
+    SIZE: MAX2GB
+    AUTORCL: yes 
+    TEXT: Stream Text Dta
+
+after:
+  - DLTOBJ:
+      OBJ: LASTORDNO 
+      OBJTYPE: DTAARA
+  - DLTOBJ:
+      OBJ: STREAMDTA 
+      OBJTYPE: DATAQ
+
+
+targets:
+  # Simple rpgle compilation
+  curlib.ADDnum.pgm.rpgle:
+    params:
+      SRCSTMF: QRPGLESRC/ADDNUM.RPGLE
