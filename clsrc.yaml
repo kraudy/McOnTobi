@@ -26,3 +26,7 @@ targets:
     params:
       SRCSTMF: QCLSRC/ORD500C.PGM.CLLE
 
+  curlib.PAR201.pgm.CLLE:
+    params:
+      SRCSTMF: QCLSRC/PAR201.pgm.CLLE
+
