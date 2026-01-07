@@ -3,4 +3,16 @@ targets:
   curlib.OPM.pgm.CLP:
     params:
       SRCSTMF: QCLSRC/OPM.pgm.CLP
+  
+  curlib.ORD100C.PGM.CLLE:
+    params:
+      SRCSTMF: QCLSRC/ORD100C.PGM.CLLE
+  
+  curlib.ORD100C2.PGM.CLLE:
+    params:
+      SRCSTMF: QCLSRC/ORD100C2.PGM.CLLE
+  
+  curlib.ORD500C.PGM.CLLE:
+    params:
+      SRCSTMF: QCLSRC/ORD500C.PGM.CLLE
 
