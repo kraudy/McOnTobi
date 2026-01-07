@@ -17,6 +17,10 @@ targets:
     params:
       SRCSTMF: QCLSRC/ORD100C2.PGM.CLLE
   
+  curlib.CVTSPLPDF.CMD.cmd:
+    params:
+      SRCSTMF: QCMDSRC/CVTSPLPDF.CMD.cmd
+
   curlib.ORD500C.PGM.CLLE:
     params:
       SRCSTMF: QCLSRC/ORD500C.PGM.CLLE
