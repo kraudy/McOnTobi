@@ -32,4 +32,8 @@ targets:
   curlib.CUSSEQ.sequence.sql:
     params:
       SRCSTMF: QSQLSRC/CUSSEQ.sequence.sql
+      
+  curlib.CUSTINFO1.table.sql:
+    params:
+      SRCSTMF: QSQLSRC/CUSTINFO1.table.sql
   
