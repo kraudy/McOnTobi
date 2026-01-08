@@ -28,4 +28,8 @@ targets:
   curlib.ARTLSTDAT.view.sql: # View of ARTICLE, ORDER, DETORD
     params:
       SRCSTMF: QSQLSRC/ARTLSTDAT.view.sql
+      
+  curlib.CUSSEQ.sequence.sql:
+    params:
+      SRCSTMF: QSQLSRC/CUSSEQ.sequence.sql
   
