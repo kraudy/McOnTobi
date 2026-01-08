@@ -46,6 +46,11 @@ before:
       SEV: 0
       CCSID: 297
 
+after:
+  DLTOBJ:
+    OBJ: SGSMSGF 
+    OBJTYPE: MSGF
+
 targets:
   # Simple rpgle compilation
   curlib.ADDnum.pgm.rpgle:
