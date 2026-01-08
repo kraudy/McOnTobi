@@ -49,7 +49,11 @@ targets:
     params:
       SRCSTMF: QDDSSRC/CUSTOMER.PF.dds
 
-  curlib.ORD701.trigger.sql: # Trigger of CUSTOMER
-    params:
-      SRCSTMF: QSQLSRC/ORD701.trigger.sql
+  # Removed because i'm not authorized to create triggers in PUB400 :/
+  #curlib.ORD701.trigger.sql: # Trigger of CUSTOMER
+  #  params:
+  #    SRCSTMF: QSQLSRC/ORD701.trigger.sql
   
+  curlib.ORDERCUS.view.sql:
+    params:
+      SRCSTMF: QSQLSRC/ORDERCUS.view.sql
