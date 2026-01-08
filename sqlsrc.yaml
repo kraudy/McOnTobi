@@ -12,12 +12,20 @@ targets:
   curlib.SAMREF.PF.dds:
     params:
       SRCSTMF: common/SAMREF.PF.dds
-      
+
   curlib.ARTICLE.pf.dds:
     params:
       SRCSTMF: QDDSSRC/ARTICLE.pf.dds
 
-  curlib.ARTLSTDAT.view.sql: # View of ARTICLE
+  curlib.ORDER.PF.dds:
+    params:
+      SRCSTMF: QDDSSRC/ORDER.PF.dds
+  
+  curlib.DETORD.PF.dds:
+    params:
+      SRCSTMF: QDDSSRC/DETORD.PF.dds
+      
+  curlib.ARTLSTDAT.view.sql: # View of ARTICLE, ORDER, DETORD
     params:
       SRCSTMF: QSQLSRC/ARTLSTDAT.view.sql
   
