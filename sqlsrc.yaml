@@ -44,4 +44,8 @@ targets:
   curlib.ISOTODATE4.function.sql:
     params:
       SRCSTMF: QSQLSRC/ISOTODATE4.function.sql
+      
+  curlib.ORD701.trigger.sql:
+    params:
+      SRCSTMF: QSQLSRC/ORD701.trigger.sql
   
