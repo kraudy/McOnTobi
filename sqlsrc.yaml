@@ -40,4 +40,8 @@ targets:
   curlib.ISOTODATE.function.sql:
     params:
       SRCSTMF: QSQLSRC/ISOTODATE.function.sql
+      
+  curlib.ISOTODATE4.function.sql:
+    params:
+      SRCSTMF: QSQLSRC/ISOTODATE4.function.sql
   
