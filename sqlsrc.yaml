@@ -36,4 +36,8 @@ targets:
   curlib.CUSTINFO1.table.sql:
     params:
       SRCSTMF: QSQLSRC/CUSTINFO1.table.sql
+      
+  curlib.ISOTODATE.function.sql:
+    params:
+      SRCSTMF: QSQLSRC/ISOTODATE.function.sql
   
