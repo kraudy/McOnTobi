@@ -9,3 +9,7 @@ targets:
     params:
       SRCSTMF: QSQLSRC/ARTIINF.table.sql
   
+  curlib.ARTLSTDAT.view.sql:
+    params:
+      SRCSTMF: QSQLSRC/ARTLSTDAT.view.sql
+  
