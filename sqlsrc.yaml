@@ -1,0 +1,7 @@
+
+targets:
+  
+  curlib.ART801.procedure.sql:
+    params:
+      SRCSTMF: QSQLSRC/ART801.procedure.sql
+  
