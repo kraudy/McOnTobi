@@ -6,20 +6,6 @@ defaults:
   REPLACE: YES
   TGTCCSID: JOB
 
-before:
-  CrtBndDir:
-    BNDDIR: SAMPLE
-
-after: 
-  DltObj: 
-    OBJ: SAMPLE
-    OBJTYPE: BndDir
-
-failure: 
-  DltObj: 
-    OBJ: SAMPLE
-    OBJTYPE: BndDir
-
 targets:
   # Simple rpgle compilation
   curlib.ADDnum.pgm.rpgle:
@@ -78,6 +64,8 @@ targets:
       MODULE:
         - FAM300
         - FAM301
+
+  curlib.SAMPLE.bnddir.bnddir: {}
 
   curlib.ART200.pgm.sqlrpgle: # Pgm
     before:
