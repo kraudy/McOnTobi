@@ -9,6 +9,10 @@ targets:
     params:
       SRCSTMF: QSQLSRC/ARTIINF.table.sql
   
+  curlib.SAMREF.PF.dds:
+    params:
+      SRCSTMF: common/SAMREF.PF.dds
+      
   curlib.ARTICLE.pf.dds:
     params:
       SRCSTMF: QDDSSRC/ARTICLE.pf.dds
