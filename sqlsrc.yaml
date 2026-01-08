@@ -9,7 +9,11 @@ targets:
     params:
       SRCSTMF: QSQLSRC/ARTIINF.table.sql
   
-  curlib.ARTLSTDAT.view.sql:
+  curlib.ARTICLE.pf.dds:
+    params:
+      SRCSTMF: QDDSSRC/ARTICLE.pf.dds
+
+  curlib.ARTLSTDAT.view.sql: # View of ARTICLE
     params:
       SRCSTMF: QSQLSRC/ARTLSTDAT.view.sql
   
