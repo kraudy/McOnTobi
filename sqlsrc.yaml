@@ -5,3 +5,7 @@ targets:
     params:
       SRCSTMF: QSQLSRC/ART801.procedure.sql
   
+  curlib.ARTIINF.table.sql:
+    params:
+      SRCSTMF: QSQLSRC/ARTIINF.table.sql
+  
