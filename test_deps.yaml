@@ -1,0 +1,26 @@
+
+# Spec to test source dependency on MasterCompiler
+
+targets:
+
+  # Targets with fixed format files
+  curlib.FAM300.module.RPGLE: # Module of FFAMILLY SrvPgm
+    params:
+      SRCSTMF: QRPGLESRC/FAM300.module.RPGLE
+    #dependsOn FAMILLY.PF.DDS
+
+  curlib.FAM301.module.RPGLE: # Module of FFAMILLY SrvPgm
+    params:
+      SRCSTMF: QRPGLESRC/FAM301.module.RPGLE
+    # dependsOn: FAMILL1.LF.DDS, FAM301D.DSPF.DDS, FAMILLY.PF.DDS
+
+  curlib.SAMPLE.bnddir.bnddir: {}
+
+  curlib.ART200.pgm.sqlrpgle: # Pgm
+    before:
+      AddBndDirE:   # Add srvpgm required by ART200
+        BndDir: SAMPLE
+        Obj: FFAMILLY
+
+    params:
+      SRCSTMF: QRPGLESRC/ART200.pgm.sqlrpgle

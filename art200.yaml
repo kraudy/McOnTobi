@@ -49,6 +49,7 @@ targets:
   curlib.FAM300.module.RPGLE: # Module of FFAMILLY SrvPgm
     params:
       SRCSTMF: QRPGLESRC/FAM300.module.RPGLE
+    #dependsOn FAMILLY.PF.DDS
 
   curlib.FAM301D.DSPF.dds: # DSPF of module FAM301
     params:
@@ -57,6 +58,7 @@ targets:
   curlib.FAM301.module.RPGLE: # Module of FFAMILLY SrvPgm
     params:
       SRCSTMF: QRPGLESRC/FAM301.module.RPGLE
+    # dependsOn: FAMILL1.LF.DDS, FAM301D.DSPF.DDS, FAMILLY.PF.DDS
 
   curlib.FFAMILLY.srvpgm.BND: # SrvPgm of ART200
     params:
