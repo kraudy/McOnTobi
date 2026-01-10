@@ -1,4 +1,4 @@
 {
   "description": "Mc On tobi project",
-  "buildCommand": "curl -LO https://github.com/kraudy/MasterCompiler/releases/download/v0.1.0/MasterCompiler-1.0-SNAPSHOT.jar && java -jar MasterCompiler-1.0-SNAPSHOT.jar -xv -f rpgsrc_iproj.yaml"
+  "buildCommand": "curl -LO https://github.com/kraudy/MasterCompiler/releases/download/v0.1.0/MasterCompiler-1.0-SNAPSHOT.jar && java -jar MasterCompiler-1.0-SNAPSHOT.jar -xvc -f rpgsrc_iproj.yaml"
 }

@@ -37,20 +37,3 @@ targets:
   curlib.COU200.pgm.RPG:
     params:
       SRCSTMF: QRPGSRC/COU200.pgm.RPG
-
-    after:
-      - DLTOBJ:
-          OBJ: COU200 
-          OBJTYPE: Pgm
-      - DLTOBJ:
-          OBJ: COU200D 
-          OBJTYPE: File
-      - DLTOBJ:
-          OBJ: COUNTRY 
-          OBJTYPE: File
-      - DLTOBJ:
-          OBJ: CUSTOMER 
-          OBJTYPE: File
-      - DLTOBJ:
-          OBJ: SAMREF 
-          OBJTYPE: File
