@@ -255,6 +255,10 @@ targets:
 
   # rpgsrc spec
 
+  curlib.COUNTRY.PF.dds:
+    params:
+      SRCSTMF: QDDSSRC/COUNTRY.PF.dds
+
   # Dspf of COU200
   curlib.COU200D.DSPF.dds:
     params:
