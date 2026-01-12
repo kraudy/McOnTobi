@@ -252,3 +252,115 @@ targets:
   curlib.ORD101.PGM.RPGLE: 
     params:
       SRCSTMF: QRPGLESRC/ORD101.PGM.RPGLE
+
+  # rpgsrc spec
+
+  # Dspf of COU200
+  curlib.COU200D.DSPF.dds:
+    params:
+      SRCSTMF: QDDSSRC/COU200D.DSPF.dds
+  
+  # Target
+  curlib.COU200.pgm.RPG:
+    params:
+      SRCSTMF: QRPGSRC/COU200.pgm.RPG
+
+  # sqlsrc spec
+
+  curlib.ARTLSTDAT.view.sql: # View of ARTICLE, ORDER, DETORD
+    params:
+      SRCSTMF: QSQLSRC/ARTLSTDAT.view.sql
+      
+  curlib.CUSSEQ.sequence.sql:
+    params:
+      SRCSTMF: QSQLSRC/CUSSEQ.sequence.sql
+      
+  curlib.CUSTINFO1.table.sql:
+    params:
+      SRCSTMF: QSQLSRC/CUSTINFO1.table.sql
+      
+  curlib.ISOTODATE.function.sql:
+    params:
+      SRCSTMF: QSQLSRC/ISOTODATE.function.sql
+      
+  curlib.ISOTODATE4.function.sql:
+    params:
+      SRCSTMF: QSQLSRC/ISOTODATE4.function.sql
+
+  # Removed because i'm not authorized to create triggers in PUB400 :/
+  #curlib.ORD701.trigger.sql: # Trigger of CUSTOMER
+  #  params:
+  #    SRCSTMF: QSQLSRC/ORD701.trigger.sql
+  
+  curlib.ORDERCUS.view.sql:
+    params:
+      SRCSTMF: QSQLSRC/ORDERCUS.view.sql
+
+  # clrsrc spec
+
+  curlib.OPM.pgm.CLP:
+    params:
+      SRCSTMF: QCLSRC/OPM.pgm.CLP
+  
+  curlib.CRTORD.CMD.cmd:
+    params:
+      SRCSTMF: QCMDSRC/CRTORD.CMD.cmd
+      PGM: ORD100
+  
+  curlib.ORD100C.PGM.CLLE:
+    params:
+      SRCSTMF: QCLSRC/ORD100C.PGM.CLLE
+  
+  curlib.ORD100C2.PGM.CLLE:
+    params:
+      SRCSTMF: QCLSRC/ORD100C2.PGM.CLLE
+  
+  curlib.CVTSPLPDF.CMD.cmd:
+    params:
+      SRCSTMF: QCMDSRC/CVTSPLPDF.CMD.cmd
+      PGM: CVTSPLPDF
+
+  curlib.ORD500C.PGM.CLLE:
+    params:
+      SRCSTMF: QCLSRC/ORD500C.PGM.CLLE
+
+  curlib.PAR201.module.CLLE:
+    params:
+      SRCSTMF: QCLSRC/PAR201.module.CLLE
+  
+  # dtasrc spec
+
+  curlib.LASTORDNO.dtaara.dtaara:
+    params:
+      Type: Dec
+      LEN: 6 0 
+      VALUE: 60719 
+      TEXT: Last customer Order
+  
+  curlib.STREAMDTA.dtaq.dtaq:
+    params:
+      MAXLEN: 64512 
+      SIZE: MAX2GB
+      AUTORCL: yes 
+      TEXT: Stream Text Dta
+
+  # msgsrc spec
+
+  curlib.SGSMSGF.msgf.msgf:
+  
+    params:
+      CCSID: 65535
+
+    after:
+      - ADDMSGD:
+          MSGID: ERR0001
+          MSGF: SGSMSGF
+          MSG: Familly code unknown. Press F4 to select.
+          SEV: 0
+          CCSID: 297
+      - ADDMSGD:
+          MSGID: ERR0002
+          MSGF: SGSMSGF
+          MSG: Country code unknown. Press F4 to select.
+          SEV: 0
+          CCSID: 297
