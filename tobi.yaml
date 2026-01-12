@@ -1,10 +1,10 @@
 # Global defaults
-defaults:
-  TGTRLS: CURRENT
-  DBGVIEW: ALL
-  OPTION: EVENTF
-  REPLACE: YES
-  TGTCCSID: JOB
+#defaults:
+#  TGTRLS: CURRENT
+#  DBGVIEW: ALL
+#  OPTION: EVENTF
+#  REPLACE: YES
+#  TGTCCSID: JOB
 
 targets:
   # Simple rpgle compilation
