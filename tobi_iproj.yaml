@@ -1,0 +1,378 @@
+
+before:
+  # This needs to be the same as the deploy location
+  ChgCurDir:
+    Dir: builds/McOnTobi
+
+after:
+  # Set dir back
+  ChgCurDir:
+    Dir: ../../
+  # Clean
+  RmvDir:
+    DIR: builds/McOnTobi 
+    SUBTREE: all
+
+
+targets:
+  # Simple rpgle compilation
+  curlib.ADDnum.pgm.rpgle:
+    params:
+      SRCSTMF: QRPGLESRC/ADDNUM.RPGLE
+  
+  # Files used by reference
+  curlib.SAMREF.PF.dds:
+    params:
+      SRCSTMF: common/SAMREF.PF.dds
+
+  curlib.vatdef.pf.dds:
+    params:
+      SRCSTMF: functionsVAT/vatdef.pf.dds
+
+  # ART200 compilation context
+  curlib.ARTICLE.pf.dds: # PF of ART200
+    params:
+      SRCSTMF: QDDSSRC/ARTICLE.pf.dds
+
+  curlib.ARTICLE1.lf.dds: # LF of ARTICLE
+    params:
+      SRCSTMF: QDDSSRC/ARTICLE1.lf.dds
+
+  curlib.ARTICLE2.lf.dds: # LF of ARTICLE
+    params:
+      SRCSTMF: QDDSSRC/ARTICLE2.lf.dds
+
+  curlib.ART200D.dspf.dds: # DSPF of ART200
+    params:
+      SRCSTMF: QDDSSRC/ART200D.dspf.dds
+
+  curlib.FAMILLY.PF.dds: # PF of module FAM300
+    params:
+      SRCSTMF: QDDSSRC/FAMILLY.PF.dds
+  
+  curlib.FAMILL1.LF.dds: # LF of PF FAMILLY
+    params:
+      SRCSTMF: QDDSSRC/FAMILL1.LF.dds
+
+  curlib.FAM300.module.RPGLE: # Module of FFAMILLY SrvPgm
+    params:
+      SRCSTMF: QRPGLESRC/FAM300.module.RPGLE
+
+  curlib.FAM301D.DSPF.dds: # DSPF of module FAM301
+    params:
+      SRCSTMF: QDDSSRC/FAM301D.DSPF.dds
+
+  curlib.FAM301.module.RPGLE: # Module of FFAMILLY SrvPgm
+    params:
+      SRCSTMF: QRPGLESRC/FAM301.module.RPGLE
+
+  curlib.FFAMILLY.srvpgm.BND: # SrvPgm of ART200
+    params:
+      SRCSTMF: QSRVSRC/FFAMILLY.srvpgm.BND
+      MODULE:
+        - FAM300
+        - FAM301
+
+  curlib.SAMPLE.bnddir.bnddir: {} # Create bnddir
+
+  curlib.ART200.pgm.sqlrpgle: # Pgm
+    before:
+      AddBndDirE:   # Add srvpgm required by ART200
+        BndDir: SAMPLE
+        Obj: FFAMILLY
+
+    params:
+      SRCSTMF: QRPGLESRC/ART200.pgm.sqlrpgle
+
+  # Context of ART201
+  curlib.PROVIDER.PF.dds:
+    params:
+      SRCSTMF: QDDSSRC/PROVIDER.PF.dds
+
+  curlib.PROVIDE1.LF.dds:
+    params:
+      SRCSTMF: QDDSSRC/PROVIDE1.LF.dds
+
+  curlib.ARTIPROV.PF.dds: # PF of ART201
+    params:
+      SRCSTMF: QDDSSRC/ARTIPROV.PF.dds
+
+  curlib.ARTIPRO1.LF.dds: # LF of ARTIPROV
+    params:
+      SRCSTMF: QDDSSRC/ARTIPRO1.LF.dds
+
+  curlib.ART201D.dspf.dds: # DSPF of PGM ART201
+    params:
+      SRCSTMF: QDDSSRC/ART201D.dspf.dds
+
+  curlib.ART300.module.rpgle: # Module of FARTICLE SrvPgm
+    params:
+      SRCSTMF: QRPGLESRC/ART300.module.rpgle
+
+  curlib.ART301D.dspf.dds: # DSPF of ART301
+    params:
+      SRCSTMF: QDDSSRC/ART301D.dspf.dds
+
+  curlib.ART301.module.SQLRPGLE: # Module of FARTICLE SrvPgm
+    params:
+      SRCSTMF: QRPGLESRC/ART301.module.SQLRPGLE
+
+  curlib.FARTICLE.srvpgm.BND: # SrvPgm of ART201
+    params:
+      SRCSTMF: QSRVSRC/FARTICLE.srvpgm.BND
+      MODULE:
+        - ART300
+        - ART301
+      BNDSRVPGM: FFAMILLY
+      TEXT: Function Article
+
+  curlib.PRO300.module.RPGLE:
+    params:
+      SRCSTMF: QRPGLESRC/PRO300.module.RPGLE
+
+  curlib.FPROVIDER.srvpgm.BND:
+    params:
+      SRCSTMF: QSRVSRC/FPROVIDER.srvpgm.BND
+      MODULE: PRO300
+      TEXT: Functions Provider
+
+  curlib.ART201.pgm.rpgle: 
+    before:
+      AddBndDirE:   # Add srvpgm required by ART201
+        BndDir: SAMPLE
+        Obj: 
+          - FARTICLE
+          - FPROVIDER
+
+    params:
+      SRCSTMF: QRPGLESRC/ART201.pgm.rpgle
+
+  # Context of ART202
+  curlib.ART202D.dspf.dds: # DSPF of ART202
+    params:
+      SRCSTMF: QDDSSRC/ART202D.dspf.dds
+
+  curlib.ART202.PGM.RPGLE: 
+    params:
+      SRCSTMF: QRPGLESRC/ART202.PGM.RPGLE
+
+  # Context of LOG100
+
+  curlib.PARAMETER.PF.dds: # PF of LOG100
+    params:
+      SRCSTMF: QDDSSRC/PARAMETER.PF.dds
+
+  curlib.LOG100.PGM.RPGLE: 
+    params:
+      SRCSTMF: QRPGLESRC/LOG100.PGM.RPGLE
+
+  # Context of ORD100
+
+  curlib.DETORD.PF.dds: # PF of ORD100
+    params:
+      SRCSTMF: QDDSSRC/DETORD.PF.dds
+
+  curlib.DETORD1.LF.dds: # LF of DETORD
+    params:
+      SRCSTMF: QDDSSRC/DETORD1.LF.dds
+
+  curlib.ORDER.PF.dds: # PF of ORD100
+    params:
+      SRCSTMF: QDDSSRC/ORDER.PF.dds
+
+  curlib.ORDER3.LF.dds: # LF of ORDER
+    params:
+      SRCSTMF: QDDSSRC/ORDER3.LF.dds
+
+  curlib.ORD100D.DSPF.dds: # DSPF of ORD100
+    params:
+      SRCSTMF: QDDSSRC/ORD100D.DSPF.dds
+
+  curlib.vat300.module.rpgle: # Module of FVAT SrvPgm
+    params:
+      SRCSTMF: functionsVAT/vat300.module.rpgle
+
+  curlib.fvat.srvpgm.bnd: # SrvPgm of ORD100
+    params:
+      SRCSTMF: functionsVAT/fvat.srvpgm.bnd
+      MODULE: VAT300
+      TEXT: Functions VAT
+
+  curlib.CUSTOMER.PF.dds: # PF of CUS300
+    params:
+      SRCSTMF: QDDSSRC/CUSTOMER.PF.dds
+
+  curlib.CUSTOME1.LF.dds: # LF of CUSTOMER PF
+    params:
+      SRCSTMF: QDDSSRC/CUSTOME1.LF.dds
+
+  curlib.CUS300.module.RPGLE: # Module of FCUSTOMER SrvPgm
+    params:
+      SRCSTMF: QRPGLESRC/CUS300.module.RPGLE
+
+  curlib.CUS301D.dspf.dds: # DSPF of CUS301
+    params:
+      SRCSTMF: QDDSSRC/CUS301D.dspf.dds
+
+  curlib.CUS301.module.SQLRPGLE: # Module of FCUSTOMER SrvPgm
+    params:
+      SRCSTMF: QRPGLESRC/CUS301.module.SQLRPGLE
+
+  curlib.FCUSTOMER.srvpgm.BND: # SrvPgm of ORD100
+    params:
+      SRCSTMF: QSRVSRC/FCUSTOMER.srvpgm.BND
+      MODULE: 
+        - CUS300
+        - CUS301
+      TEXT: Functions Customer
+
+  curlib.ORD100.PGM.RPGLE: 
+    before:
+      OvrDbf: 
+        File: tmpdetord
+        ToFile: detord
+        OvrScope: Job
+      
+      AddBndDirE:   # Add srvpgm required by ORD100
+        BndDir: SAMPLE
+        Obj: 
+          - fvat
+          - FCUSTOMER
+
+    params:
+      SRCSTMF: QRPGLESRC/ORD100.PGM.RPGLE
+
+    after:
+      DltOvr: 
+        File: tmpdetord
+        LVL: Job
+
+  # Context of ORD101
+  
+  curlib.ORDER1.LF.dds: # LF of ORDER
+    params:
+      SRCSTMF: QDDSSRC/ORDER1.LF.dds
+
+  curlib.ORD101D.DSPF.dds: # DSPF of ORD101
+    params:
+      SRCSTMF: QDDSSRC/ORD101D.DSPF.dds
+
+  curlib.ORD101.PGM.RPGLE: 
+    params:
+      SRCSTMF: QRPGLESRC/ORD101.PGM.RPGLE
+
+  # rpgsrc spec
+
+  curlib.COUNTRY.PF.dds:
+    params:
+      SRCSTMF: QDDSSRC/COUNTRY.PF.dds
+
+  # Dspf of COU200
+  curlib.COU200D.DSPF.dds:
+    params:
+      SRCSTMF: QDDSSRC/COU200D.DSPF.dds
+  
+  # Target
+  curlib.COU200.pgm.RPG:
+    params:
+      SRCSTMF: QRPGSRC/COU200.pgm.RPG
+
+  # sqlsrc spec
+
+  curlib.ARTLSTDAT.view.sql: # View of ARTICLE, ORDER, DETORD
+    params:
+      SRCSTMF: QSQLSRC/ARTLSTDAT.view.sql
+      
+  curlib.CUSSEQ.sequence.sql:
+    params:
+      SRCSTMF: QSQLSRC/CUSSEQ.sequence.sql
+      
+  curlib.CUSTINFO1.table.sql:
+    params:
+      SRCSTMF: QSQLSRC/CUSTINFO1.table.sql
+      
+  curlib.ISOTODATE.function.sql:
+    params:
+      SRCSTMF: QSQLSRC/ISOTODATE.function.sql
+      
+  curlib.ISOTODATE4.function.sql:
+    params:
+      SRCSTMF: QSQLSRC/ISOTODATE4.function.sql
+
+  # Removed because i'm not authorized to create triggers in PUB400 :/
+  #curlib.ORD701.trigger.sql: # Trigger of CUSTOMER
+  #  params:
+  #    SRCSTMF: QSQLSRC/ORD701.trigger.sql
+  
+  curlib.ORDERCUS.view.sql:
+    params:
+      SRCSTMF: QSQLSRC/ORDERCUS.view.sql
+
+  # clrsrc spec
+
+  curlib.OPM.pgm.CLP:
+    params:
+      SRCSTMF: QCLSRC/OPM.pgm.CLP
+  
+  curlib.CRTORD.CMD.cmd:
+    params:
+      SRCSTMF: QCMDSRC/CRTORD.CMD.cmd
+      PGM: ORD100
+  
+  curlib.ORD100C.PGM.CLLE:
+    params:
+      SRCSTMF: QCLSRC/ORD100C.PGM.CLLE
+  
+  curlib.ORD100C2.PGM.CLLE:
+    params:
+      SRCSTMF: QCLSRC/ORD100C2.PGM.CLLE
+  
+  curlib.CVTSPLPDF.CMD.cmd:
+    params:
+      SRCSTMF: QCMDSRC/CVTSPLPDF.CMD.cmd
+      PGM: CVTSPLPDF
+
+  curlib.ORD500C.PGM.CLLE:
+    params:
+      SRCSTMF: QCLSRC/ORD500C.PGM.CLLE
+
+  curlib.PAR201.module.CLLE:
+    params:
+      SRCSTMF: QCLSRC/PAR201.module.CLLE
+  
+  # dtasrc spec
+
+  curlib.LASTORDNO.dtaara.dtaara:
+    params:
+      Type: Dec
+      LEN: 6 0 
+      VALUE: 60719 
+      TEXT: Last customer Order
+  
+  curlib.STREAMDTA.dtaq.dtaq:
+    params:
+      MAXLEN: 64512 
+      SIZE: MAX2GB
+      AUTORCL: yes 
+      TEXT: Stream Text Dta
+
+  # msgsrc spec
+
+  curlib.SGSMSGF.msgf.msgf:
+  
+    params:
+      CCSID: 65535
+
+    after:
+      - ADDMSGD:
+          MSGID: ERR0001
+          MSGF: SGSMSGF
+          MSG: Familly code unknown. Press F4 to select.
+          SEV: 0
+          CCSID: 297
+      - ADDMSGD:
+          MSGID: ERR0002
+          MSGF: SGSMSGF
+          MSG: Country code unknown. Press F4 to select.
+          SEV: 0
+          CCSID: 297
