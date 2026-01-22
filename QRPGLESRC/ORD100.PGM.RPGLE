@@ -24,7 +24,8 @@
      d   cuid                              options(*NOPASS)
      d                                     like(orcuid)
 
-     d Prtord          pr                  extpgm('ORD500')
+      * ORD500 does not exists
+     d Prtord          pr                  extpgm('ORD500C')
      d  x                                  like(orid)
 
      D info            ds

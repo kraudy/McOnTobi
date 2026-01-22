@@ -253,6 +253,25 @@ targets:
     params:
       SRCSTMF: QRPGLESRC/ORD101.PGM.RPGLE
 
+  # Context of ORD201
+
+  curlib.ORD202D.DSPF.dds:
+    params:
+      SRCSTMF: QDDSSRC/ORD202D.DSPF.dds
+
+  curlib.ORD202.PGM.RPGLE: 
+    params:
+      SRCSTMF: QRPGLESRC/ORD202.PGM.RPGLE
+
+  curlib.ORD201D.DSPF.dds:
+    params:
+      SRCSTMF: QDDSSRC/ORD201D.DSPF.dds
+
+  curlib.ORD201.PGM.SQLRPGLE: 
+    params:
+      SRCSTMF: QRPGLESRC/ORD201.PGM.SQLRPGLE
+
+
   # rpgsrc spec
 
   curlib.COUNTRY.PF.dds:
@@ -323,6 +342,8 @@ targets:
     params:
       SRCSTMF: QCMDSRC/CVTSPLPDF.CMD.cmd
       PGM: CVTSPLPDF
+
+  #
 
   curlib.ORD500C.PGM.CLLE:
     params:
