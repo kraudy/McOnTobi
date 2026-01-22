@@ -22,6 +22,11 @@ targets:
       SRCSTMF: functionsVAT/vatdef.pf.dds
 
   # ART200 compilation context
+
+  curlib.ARTIINF.TABLE.sql:
+    params:
+      SRCSTMF: QDDSSRC/ARTIINF.TABLE.sql
+
   curlib.ARTICLE.pf.dds: # PF of ART200
     params:
       SRCSTMF: QDDSSRC/ARTICLE.pf.dds
