@@ -272,6 +272,10 @@ targets:
     params:
       SRCSTMF: QDDSSRC/ORD201D.DSPF.dds
 
+  curlib.ORDERCUS.VIEW.sql:
+    params:
+      SRCSTMF: QSQLSRC/ORDERCUS.VIEW.sql
+
   curlib.ORD201.PGM.SQLRPGLE: 
     params:
       SRCSTMF: QRPGLESRC/ORD201.PGM.SQLRPGLE
