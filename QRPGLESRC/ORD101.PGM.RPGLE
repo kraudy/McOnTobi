@@ -20,8 +20,8 @@
      d  ord101         pi
      d   id
      d                                     like(orid)
-
-     d Prtord          pr                  extpgm('ORD500')
+      * ORD500 does not exists in project
+     d Prtord          pr                  extpgm('ORD500C')
      d  x                                  like(orid)
 
      D info            ds
