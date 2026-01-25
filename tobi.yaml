@@ -258,6 +258,12 @@ targets:
     params:
       SRCSTMF: QRPGLESRC/ORD101.PGM.RPGLE
 
+  # Context of ORD900
+
+  curlib.ORD900.PGM.RPGLE: 
+    params:
+      SRCSTMF: QRPGLESRC/ORD900.PGM.RPGLE
+
   # Context of ORD201
 
   curlib.ORD202D.DSPF.dds:
