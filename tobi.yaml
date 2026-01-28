@@ -340,6 +340,10 @@ targets:
     params:
       SRCSTMF: QSQLSRC/ORDERCUS.view.sql
 
+  curlib.ART801.procedure.sql:
+    params:
+      SRCSTMF: QSQLSRC/ART801.procedure.sql
+
   # clrsrc spec
 
   curlib.OPM.pgm.CLP:
