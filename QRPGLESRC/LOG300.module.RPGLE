@@ -1,5 +1,5 @@
-     *   %XREF XREFTYPE(*OBJ)   OBJ(SAMLOG) OBJTYPE(*USRSPC)   USAGE(*UPD)
-     * Module for LOG *SRVPGM — exports AddLogEntry (from IBM/tobi-example)
+      *   %XREF XREFTYPE(*OBJ)   OBJ(SAMLOG) OBJTYPE(*USRSPC)   USAGE(*UPD)
+      * Module for LOG *SRVPGM — exports AddLogEntry (from IBM/tobi-example)
 
      h nomain
 
