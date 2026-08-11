@@ -121,3 +121,16 @@ targets:
       DltOvr:
         File: tmpdetord
         LVL: Job
+
+  # LOG *SRVPGM (LOG300) exports ADDLOGENTRY — required by ORD700 via BNDDIR(SAMPLE)
+  # (from IBM/tobi-example SAMPLE.BNDDIR entry *LIBL/LOG)
+  curlib.LOG.srvpgm.bnd:
+    params:
+      MODULE: LOG300
+      TEXT: Log Functions
+
+  curlib.ORD700.PGM.RPGLE:
+    before:
+      AddBndDirE:
+        BndDir: SAMPLE
+        Obj: LOG
