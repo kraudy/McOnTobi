@@ -1,4 +1,4 @@
-             CMD        PGM(CVTSPLPDF) PROMPT('Convert Spool to PDF')
+             CMD        PROMPT('Convert Spool to PDF')
 
              PARM       KWD(FROMFILE) TYPE(*NAME) LEN(10) MIN(1) +
                           PROMPT('From spooled file name')

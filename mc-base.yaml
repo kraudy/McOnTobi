@@ -1,0 +1,12 @@
+# Non-inferable params for MasterCompiler --scan
+# Auto-merged when present at the scan root (or pass --base <file>).
+# Keep only what scan cannot discover (e.g. CRTCMD PGM — not valid on CMD definition source).
+
+targets:
+  curlib.CRTORD.CMD.cmd:
+    params:
+      PGM: ORD100
+
+  curlib.CVTSPLPDF.CMD.cmd:
+    params:
+      PGM: CVTSPLPDF
